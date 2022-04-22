@@ -1,28 +1,24 @@
 // swift-tools-version: 5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
+// Generated automatically by Perfect Assistant 2
+// Date: 2018-03-28 18:54:02 +0000
 import PackageDescription
 
 let package = Package(
-    name: " Perfect-HTTPServer",
+    name: "PerfectHTTPServer",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: " Perfect-HTTPServer",
-            targets: [" Perfect-HTTPServer"]),
+        .library(name: "PerfectHTTPServer", targets: ["PerfectHTTPServer"])
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-Net.git", from: "3.1.2"),
+        .package(url: "https://github.com/Charlieatinstinct/PerfectHTTP.git", from: "1.0.1"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-CZlib-src.git", from: "0.0.0")
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: " Perfect-HTTPServer",
-            dependencies: []),
-        .testTarget(
-            name: " Perfect-HTTPServerTests",
-            dependencies: [" Perfect-HTTPServer"]),
+        .target(name: "PerfectCHTTPParser", dependencies: []),
+        .target(name: "PerfectHTTPServer", dependencies: ["PerfectCHTTPParser", .product(name: "PerfectNet", package: "Perfect-Net"), "PerfectHTTP", .product(name: "PerfectCZlib", package: "Perfect-CZlib-src")]),
+        .testTarget(name: "PerfectHTTPServerTests", dependencies: ["PerfectHTTPServer"])
     ]
 )
+
