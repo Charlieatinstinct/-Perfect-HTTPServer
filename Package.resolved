@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Charlieatinstinct/PerfectHTTP.git",
       "state" : {
-        "revision" : "ef97e837f981724aabc7d9bc8a651180c1089d74",
-        "version" : "1.0.1"
+        "revision" : "7541aefe9ff9e5e4c8e09dcd10f2c0d5eaaa44d4",
+        "version" : "1.0.3"
       }
     },
     {

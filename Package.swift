@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/PerfectlySoft/Perfect-Net.git", from: "3.1.2"),
-        .package(url: "https://github.com/Charlieatinstinct/PerfectHTTP.git", from: "1.0.1"),
+        .package(url: "https://github.com/Charlieatinstinct/PerfectHTTP.git", from: "1.0.3"),
         .package(url: "https://github.com/PerfectlySoft/Perfect-CZlib-src.git", from: "0.0.0")
     ],
     targets: [
